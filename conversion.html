@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment #1 - Unit Conversion | Nino Chacon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Nino Chacon</a>
+      <nav class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="calculations.html">CS 1130 Programs</a>
+        <a href="conversion.html" class="active">1. Conversion</a>
+        <a href="tax.html">2. Income Tax</a>
+        <a href="loops.html">3. Loops</a>
+        <a href="payroll.html">4. Payroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="card">
+      <h1 class="center-title">Assignment #1: Unit Conversion</h1>
+      <p class="subtitle">Convert temperature and length units using modern JavaScript functions</p>
+
+      <div class="form-group" style="max-width: 340px; margin: 0 auto 1.25rem auto;">
+        <label for="convInput">Enter Numeric Value:</label>
+        <input type="number" id="convInput" step="any" placeholder="e.g., 100" />
+        <span id="convError" class="error-msg">Please enter a valid number.</span>
+      </div>
+
+      <div class="grid-2x2">
+        <button type="button" class="btn-tile" data-type="cToF">
+          <span class="tag">Temperature</span>
+          Celsius &rarr; Fahrenheit
+        </button>
+        <button type="button" class="btn-tile" data-type="fToC">
+          <span class="tag">Temperature</span>
+          Fahrenheit &rarr; Celsius
+        </button>
+        <button type="button" class="btn-tile" data-type="mToFt">
+          <span class="tag">Length</span>
+          Meters &rarr; Feet
+        </button>
+        <button type="button" class="btn-tile" data-type="ftToM">
+          <span class="tag">Length</span>
+          Feet &rarr; Meters
+        </button>
+      </div>
+
+      <div id="convResult" class="result-box" style="text-align: center;">
+        Enter a value above and click one of the four conversion buttons.
+      </div>
+
+      <a href="calculations.html" class="btn-back">&larr; Back to CS 1130 Programs</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="addu_logo.png" alt="Ateneo de Davao University Logo" class="footer-logo" />
+      <div class="footer-student">BSCS 1 - A &nbsp;|&nbsp; NINO EHDTON RAIUS S. CHACON</div>
+      <div class="footer-course">CS 1130 Introduction to Computing &bull; Ateneo de Davao University</div>
+      <a href="#top" class="back-top">Back to Top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="conversion.js"></script>
+</body>
+</html>

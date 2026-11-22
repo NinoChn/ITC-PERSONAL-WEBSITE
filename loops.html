@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment #3 - Loops Operations | Nino Chacon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Nino Chacon</a>
+      <nav class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="calculations.html">CS 1130 Programs</a>
+        <a href="conversion.html">1. Conversion</a>
+        <a href="tax.html">2. Income Tax</a>
+        <a href="loops.html" class="active">3. Loops</a>
+        <a href="payroll.html">4. Payroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="card">
+      <h1 class="center-title">Assignment #3: Looping Operations</h1>
+      <p class="subtitle">Compute Factorial (While), Sum (Do-While), and Average (For) of the first N natural numbers</p>
+
+      <div class="form-grid" style="max-width: 480px; margin: 0 auto 1rem auto; align-items: end;">
+        <div class="form-group">
+          <label for="loopN">Enter Positive Integer (N):</label>
+          <input type="number" id="loopN" min="1" step="1" placeholder="e.g., 5" />
+        </div>
+        <button type="button" id="computeLoopsBtn" class="btn-action">Compute Results</button>
+      </div>
+      <p id="loopError" class="error-msg" style="text-align: center;">Please enter a valid positive integer (N &ge; 1).</p>
+
+      <div id="loopResult" class="result-box">
+        Enter a value for <strong>N</strong> above to compute all three loop outputs.
+      </div>
+
+      <a href="calculations.html" class="btn-back">&larr; Back to CS 1130 Programs</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="addu_logo.png" alt="Ateneo de Davao University Logo" class="footer-logo" />
+      <div class="footer-student">BSCS 1 - A &nbsp;|&nbsp; NINO EHDTON RAIUS S. CHACON</div>
+      <div class="footer-course">CS 1130 Introduction to Computing &bull; Ateneo de Davao University</div>
+      <a href="#top" class="back-top">Back to Top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="loops.js"></script>
+</body>
+</html>

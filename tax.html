@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment #2 - Income Tax Calculator | Nino Chacon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Nino Chacon</a>
+      <nav class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="calculations.html">CS 1130 Programs</a>
+        <a href="conversion.html">1. Conversion</a>
+        <a href="tax.html" class="active">2. Income Tax</a>
+        <a href="loops.html">3. Loops</a>
+        <a href="payroll.html">4. Payroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="card">
+      <h1 class="center-title">Assignment #2: Income Tax Calculator</h1>
+      <p class="subtitle">Compute Philippine Net Taxable Income Tax using progressive tax brackets</p>
+
+      <div class="form-grid" style="max-width: 520px; margin: 0 auto 1rem auto; align-items: end;">
+        <div class="form-group">
+          <label for="taxIncome">Net Taxable Income (₱):</label>
+          <input type="number" id="taxIncome" min="0" step="any" placeholder="e.g., 320000" />
+        </div>
+        <button type="button" id="calcTaxBtn" class="btn-action">Compute Income Tax</button>
+      </div>
+      <p id="taxError" class="error-msg" style="text-align: center;">Please enter a valid non-negative taxable income.</p>
+
+      <div id="taxResult" class="result-box" style="text-align: center;">
+        Enter your Net Taxable Income above to compute your Income Tax.
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Over</th>
+              <th>But Not Over</th>
+              <th>Basic Tax + Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>—</td><td>₱250,000</td><td>0%</td></tr>
+            <tr><td>₱250,000</td><td>₱400,000</td><td>20% of the excess over ₱250,000</td></tr>
+            <tr><td>₱400,000</td><td>₱800,000</td><td>₱30,000 + 25% of the excess over ₱400,000</td></tr>
+            <tr><td>₱800,000</td><td>₱2,000,000</td><td>₱130,000 + 30% of the excess over ₱800,000</td></tr>
+            <tr><td>₱2,000,000</td><td>₱8,000,000</td><td>₱490,000 + 32% of the excess over ₱2,000,000</td></tr>
+            <tr><td>₱8,000,000</td><td>—</td><td>₱2,410,000 + 35% of the excess over ₱8,000,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a href="calculations.html" class="btn-back">&larr; Back to CS 1130 Programs</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="addu_logo.png" alt="Ateneo de Davao University Logo" class="footer-logo" />
+      <div class="footer-student">BSCS 1 - A &nbsp;|&nbsp; NINO EHDTON RAIUS S. CHACON</div>
+      <div class="footer-course">CS 1130 Introduction to Computing &bull; Ateneo de Davao University</div>
+      <a href="#top" class="back-top">Back to Top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="tax.js"></script>
+</body>
+</html>

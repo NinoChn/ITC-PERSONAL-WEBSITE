@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment #4 - Simple Payroll | Nino Chacon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">Nino Chacon</a>
+      <nav class="nav-links">
+        <a href="index.html">About Me</a>
+        <a href="calculations.html">CS 1130 Programs</a>
+        <a href="conversion.html">1. Conversion</a>
+        <a href="tax.html">2. Income Tax</a>
+        <a href="loops.html">3. Loops</a>
+        <a href="payroll.html" class="active">4. Payroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="card">
+      <h1 class="center-title">Assignment #4: Simple Payroll System</h1>
+      <p class="subtitle">Add and delete employee records dynamically in the payroll table</p>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="empName">Employee Name:</label>
+          <input type="text" id="empName" placeholder="e.g., Juan Dela Cruz" />
+        </div>
+        <div class="form-group">
+          <label for="daysWorked">Days Worked:</label>
+          <input type="number" id="daysWorked" min="0" step="any" placeholder="e.g., 15" />
+        </div>
+        <div class="form-group">
+          <label for="dailyRate">Daily Rate (₱):</label>
+          <input type="number" id="dailyRate" min="0" step="any" placeholder="e.g., 650" />
+        </div>
+        <div class="form-group">
+          <label for="deduction">Deduction Amount (₱):</label>
+          <input type="number" id="deduction" min="0" step="any" placeholder="e.g., 500" />
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; justify-content: space-between;">
+        <button type="button" id="addEmpBtn" class="btn-action">+ Add Employee</button>
+
+        <div style="display: flex; gap: 0.5rem; align-items: end;">
+          <div class="form-group">
+            <label for="deleteLineNo">Line No. to Delete:</label>
+            <input type="number" id="deleteLineNo" min="1" step="1" placeholder="e.g., 1" style="width: 130px;" />
+          </div>
+          <button type="button" id="deleteEmpBtn" class="btn-action btn-danger">Delete Line</button>
+        </div>
+      </div>
+
+      <p id="payrollError" class="error-msg"></p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Employee Name</th>
+              <th>Days Worked</th>
+              <th>Daily Rate</th>
+              <th>Gross Pay</th>
+              <th>Deduction Amount</th>
+              <th>Net Pay</th>
+            </tr>
+          </thead>
+          <tbody id="payrollBody">
+            <tr>
+              <td colspan="7" style="text-align: center; color: #64748b;">No employees added yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a href="calculations.html" class="btn-back">&larr; Back to CS 1130 Programs</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img src="addu_logo.png" alt="Ateneo de Davao University Logo" class="footer-logo" />
+      <div class="footer-student">BSCS 1 - A &nbsp;|&nbsp; NINO EHDTON RAIUS S. CHACON</div>
+      <div class="footer-course">CS 1130 Introduction to Computing &bull; Ateneo de Davao University</div>
+      <a href="#top" class="back-top">Back to Top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="payroll.js"></script>
+</body>
+</html>
